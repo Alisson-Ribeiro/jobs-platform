@@ -2,12 +2,14 @@
 
 use Illuminate\Support\Facades\Route;
 use app\http\controllers\JobController;
+use App\Http\Controllers\TagController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\SessionController;
 use App\Http\Controllers\RegisteredUserController;
 
 Route::get('/', [JobController::class, 'index']);
 Route::get('/search', SearchController::class);
+Route::get('/tags/{tag}', TagController::class);
 
 Route::middleware('guest')->group(function() {
 

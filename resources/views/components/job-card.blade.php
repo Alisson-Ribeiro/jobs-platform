@@ -15,6 +15,6 @@
                 <x-tag :tag="$tag" size="small"></x-tag>
             @endforeach
         </div>
-        <x-employer-logo :width="42"/>
+        <x-employer-logo :employer="$job->employer" :width="42"/>
     </div>
 </x-panel>
